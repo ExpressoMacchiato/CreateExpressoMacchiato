@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  express-oo:
-    container_name: express-oo
+  expresso-macchiato:
+    container_name: expresso-macchiato
     build:
       context: .
       dockerfile: Dockerfile
