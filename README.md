@@ -43,6 +43,9 @@
 
 
 ## 🚀 Template Usage
+```
+npx create-expresso-macchiato
+```
 This repository serves as the template for the npx create-expresso-macchiato command.\
 Running the command will:
 * Clone this repository
