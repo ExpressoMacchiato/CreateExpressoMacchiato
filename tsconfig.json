@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "noImplicitAny": true,
+      "esModuleInterop": true,
+      "strictNullChecks": true,
+      "target": "ES2021",
+      "moduleResolution": "Node",
+      "module": "CommonJS",
+      "declaration": true,
+      "isolatedModules": true,
+      "outDir": "dist",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "allowSyntheticDefaultImports": true,
+      // "useDefineForClassFields": false,
+      "typeRoots": ["./node_modules/@types", "types"],
+      "skipLibCheck": true,
+    },
+    "include": ["utils", "types", "db/**/*"],
+    "exclude": ["node_modules"]
+}
