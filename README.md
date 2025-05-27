@@ -1,29 +1,25 @@
 # Create Expresso Macchiato
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/alessioVelluso/ExpressoMacchiato/refs/heads/master/_github_assets/expresso-macchiato.svg" style="height: 220px;" />
+  <img src="https://raw.githubusercontent.com/ExpressoMacchiato/ExpressoMacchiato/refs/heads/master/_github_assets/expresso-macchiato.svg" style="height: 220px;" />
 </p>
 
 <p align="center">
   <!-- ⭐ GitHub Stars -->
-  <a href="https://github.com/alessioVelluso/ExpressoMacchiato/stargazers">
-    <img src="https://img.shields.io/github/stars/alessioVelluso/ExpressoMacchiato?style=social" alt="GitHub stars" />
-  </a>
-  <!-- 📄 Licenza -->
-  <a href="https://github.com/alessioVelluso/ExpressoMacchiato/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/alessioVelluso/ExpressoMacchiato" alt="License" />
+  <a href="https://github.com/ExpressoMacchiato/ExpressoMacchiato/stargazers">
+    <img src="https://img.shields.io/github/stars/ExpressoMacchiato/ExpressoMacchiato?style=social" alt="GitHub stars" />
   </a>
   <!-- 🐛 Issues aperti -->
-  <a href="https://github.com/alessioVelluso/ExpressoMacchiato/issues">
-    <img src="https://img.shields.io/github/issues/alessioVelluso/ExpressoMacchiato" alt="GitHub issues" />
+  <a href="https://github.com/ExpressoMacchiato/ExpressoMacchiato/issues">
+    <img src="https://img.shields.io/github/issues/ExpressoMacchiato/ExpressoMacchiato" alt="GitHub issues" />
   </a>
   <!-- 🔃 Pull Requests -->
-  <a href="https://github.com/alessioVelluso/ExpressoMacchiato/pulls">
-    <img src="https://img.shields.io/github/issues-pr/alessioVelluso/ExpressoMacchiato" alt="GitHub pull requests" />
+  <a href="https://github.com/ExpressoMacchiato/ExpressoMacchiato/pulls">
+    <img src="https://img.shields.io/github/issues-pr/ExpressoMacchiato/ExpressoMacchiato" alt="GitHub pull requests" />
   </a>
   <!-- 📦 Ultima Release -->
-  <a href="https://github.com/alessioVelluso/ExpressoMacchiato/releases">
-    <img src="https://img.shields.io/github/v/release/alessioVelluso/ExpressoMacchiato" alt="GitHub release" />
+  <a href="https://github.com/ExpressoMacchiato/ExpressoMacchiato/releases">
+    <img src="https://img.shields.io/github/v/release/ExpressoMacchiato/ExpressoMacchiato" alt="GitHub release" />
   </a>
 </p>
 
@@ -55,4 +51,4 @@ Running the command will:
 
 This lets you start building your app right away with a clean setup.
 
-👉 Check out the official [Expresso Macchiato]([https://github.com/alessioVelluso/ExpressoMacchiato.git](https://github.com/alessioVelluso/ExpressoMacchiato?tab=readme-ov-file) official repo to see how everything works under the hood.
+👉 Check out the official [Expresso Macchiato](https://github.com/ExpressoMacchiato/ExpressoMacchiato.git) official repo to see how everything works under the hood.
