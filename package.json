@@ -1,20 +1,19 @@
 {
   "name": "expressomacchiatotemplate",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "",
-  "main": "server.ts",
+  "main": "main.ts",
   "scripts": {
-    "dev": "nodemon test.ts",
+    "dev": "nodemon main.ts",
     "build": "tsup",
-    "prod": "node dist/test.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "node dist/main.js"
   },
   "keywords": [],
   "author": "Alessio Velluso",
   "license": "MIT",
   "dependencies": {
     "avatart": "^1.1.0",
-    "expresso-macchiato": "^0.3.1",
+    "expresso-macchiato": "^0.3.3",
     "minio": "^8.0.5",
     "sqlite3": "^5.1.7"
   },
