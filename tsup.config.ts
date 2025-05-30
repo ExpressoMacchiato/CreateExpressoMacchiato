@@ -27,6 +27,8 @@ export default defineConfig({
     './_configs.ts',
     './db/**/*.ts',
     './routes/**/*.ts',
+    './sockets/**/*.ts',
+    './services/**/*.ts',
     './utils/**/*.ts',
   ],
   dts: false,

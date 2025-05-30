@@ -10,6 +10,6 @@ export const noteRoutes = new RouterWrapper({
         entity: Note,
         secure: { user_id: { tokenKey: 'id', methods: "*" } },
         getParameters: [{ in: 'query', like:true, name:'content' }],
-        bodyParameters: Swagger.createSchema({ content: { type: 'string', } }),
+        bodyParameters: Swagger.createSchema({ content: 'string' }),
     }
 });
