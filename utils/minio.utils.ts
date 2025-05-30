@@ -50,7 +50,7 @@ export class Minio
         }
         catch (err)
         {
-            fullLogNok('minio', err, id);
+            fullLogNok('minio', id, err);
             return null;
         }
     }

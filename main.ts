@@ -7,6 +7,8 @@ import { noteRoutes } from "./routes/notes.routes";
 import { salesRouter } from "./routes/sales.routes";
 import { testRoutes } from "./routes/test.routes";
 import { userRouter } from "./routes/user.routes";
+import { sayngHiService } from "./services/sayingHi.service";
+import { devUserSocket } from "./sockets/devUser.socket";
 import { tokenApiOptions, tokenInstance } from "./utils/token.utils";
 
 const [entities, migrations] = getCompiledPath(__filename, __dirname, ['db/models/**/*', 'db/migrations/**/*']).map(x => [x])
@@ -17,6 +19,8 @@ new Starter({
 	plugins: [cors(), bodyParser.json()],
 	clientPath: "client",
     tokenOptions: { tokenInstance, api:tokenApiOptions },
+	sockets: { wrappers: [devUserSocket] },
+	backgroundServices: [ sayngHiService],
 	routers:[
 		userRouter,
 		salesRouter,
