@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="0.4.0"></a>
+## 0.4.0 (2025-05-30)
+
+### Miscellaneous
+
+- 🚧 Testing Socket Wrapper [[10e2123](https://github.com/ExpressoMacchiato/CreateExpressoMacchiato/commit/10e21234b8b11ff1c96775cabfc965a83f7aa2d7)]
+- 🚧 Sockets and stuff [[7c6131f](https://github.com/ExpressoMacchiato/CreateExpressoMacchiato/commit/7c6131f7dd9c78dc386fa344c9f17aaab2120536)]
+
+
 <a name="0.3.3"></a>
 ## 0.3.3 (2025-05-27)
 
