@@ -1,4 +1,4 @@
-import { log, SocketConnectionMiddleware, socketNok, socketOk } from "expresso-macchiato";
+import { SocketConnectionMiddleware, socketNok, socketOk } from "expresso-macchiato";
 import { Equal } from "typeorm";
 import { User } from "../db/models/user.model";
 import { tokenInstance } from "../utils/token.utils";
@@ -12,6 +12,5 @@ export const authMiddleware:SocketConnectionMiddleware =  async (self, client, c
     const user = await User.findOneBy({ id: Equal(id) });
     if (!user) return socketNok("User not found");
 
-    log.green(`[SOCKETWRAPPER] [${self.socketNamespace.toUpperCase()}] Client ${client.id} authorized`);
     return socketOk({ userId:user.id, userEmail:user.email, userName:user.name });
 }

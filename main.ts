@@ -19,7 +19,7 @@ new Starter({
 	plugins: [cors(), bodyParser.json()],
 	clientPath: "client",
     tokenOptions: { tokenInstance, api:tokenApiOptions },
-	sockets: { wrappers: [devUserSocket] },
+	sockets: { wrappers: [devUserSocket], options: { cors: { allowedHeaders: ['*'] } } },
 	backgroundServices: [ sayngHiService],
 	routers:[
 		userRouter,

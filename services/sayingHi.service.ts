@@ -16,18 +16,19 @@ export const sayngHiService = new BackgroundService({
                 const devUser = await User.findBy({ name: Like('%dev%') });
                 for (const user of devUser)
                 {
-                    if (user.id in devUserSocket.getConnectedSockets())
+                    const connectedCLients = Array.from(devUserSocket.getConnectedSockets().keys());
+                    if (connectedCLients.includes(user.id))
                     {
                         devUserSocket.sendToClient(
                             user.id,
-                            "saying_stuff",
+                            "sayingStuff",
                             { message: `Hello ${user.name}, your name contains 'dev' and the counter is a multiple of five, this is a test message #${counter}` }
                         );
                     }
                 }
             }
 
-            devUserSocket.broadcast("saying_stuff", { message: `This is a test message #${counter}` });
+            devUserSocket.broadcast("sayingStuff", { message: `This is a test message #${counter}` });
             counter++;
             await sleep(2000);
         }

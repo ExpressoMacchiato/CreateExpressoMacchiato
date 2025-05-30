@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "avatart": "^1.1.0",
-    "expresso-macchiato": "^0.3.8-dev.1",
+    "expresso-macchiato": "^0.3.8-dev.6",
     "minio": "^8.0.5",
     "sqlite3": "^5.1.7"
   },
