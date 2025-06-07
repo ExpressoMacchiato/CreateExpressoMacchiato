@@ -37,7 +37,7 @@ export const userRouter = new RouterWrapper({
                     if (!passwordMatch) return apiNok("Wrong Credentials", 401);
 
                     const token = await tokenInstance.generateJWE({ id: user.id });
-                    const image = await Minio.getProfilePic(user.id);
+                    const image = await Minio.getProfilePicPresignedUrl(user.id);
                     return apiOk({
                         token,
                         info:{ name: user.name, email: user.email, image }
@@ -58,7 +58,7 @@ export const userRouter = new RouterWrapper({
                     const user = await User.create({ name, email, password }).save();
 
                     const token = await tokenInstance.generateJWE({ id: user.id });
-                    const image = await Minio.getProfilePic(user.id);
+                    const image = await Minio.getProfilePicPresignedUrl(user.id);
                     return apiOk({
                         token,
                         info:{ name: user.name, email: user.email, image }

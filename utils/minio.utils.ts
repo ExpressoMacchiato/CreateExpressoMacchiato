@@ -15,6 +15,16 @@ export class Minio
         secretKey: projectConfig.MINIO_SECRET_KEY,
     });
 
+
+    /**
+     * Cache for profile picture URLs to avoid frequent requests to MinIO.
+     * The cache stores the URL and an expiration timestamp.
+     */
+    public static readonly profilePicCache:
+        Map<string, { url:string, expires:number }> =
+        new Map();
+
+
     public static putObject = async (bucket:string, writingFileName:string, content:string | Buffer, metadata?:any) =>
     {
         try
@@ -47,6 +57,29 @@ export class Minio
             const imgBase64 = minioBuffer.toString('base64');
 
             return imgBase64;
+        }
+        catch (err)
+        {
+            fullLogNok('minio', id, err);
+            return null;
+        }
+    }
+
+    public static getProfilePicPresignedUrl = async (id:string) =>
+    {
+        try
+        {
+            if (this.profilePicCache.has(id))
+            {
+                const cached = this.profilePicCache.get(id);
+                if (!cached || cached.expires > Date.now()) return cached!.url;
+                else this.profilePicCache.delete(id);
+            }
+
+            const expire = 60 * 60
+            const minioRes = await this.client.presignedGetObject(this.profilePicBucket, `${id}.png`, expire)
+            this.profilePicCache.set(id, { url:minioRes, expires: Date.now() + (expire - 300) * 1000})
+            return minioRes;
         }
         catch (err)
         {
